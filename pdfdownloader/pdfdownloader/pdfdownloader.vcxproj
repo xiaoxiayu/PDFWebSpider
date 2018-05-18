@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A50F189B-A764-4E75-9255-F023F7DF4258}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pdfdownloader</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../;../fxcore/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../lib/libcurl.lib;../fxcore/lib/dbg/mt_x86_vc10/fpdfapi[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fpdfdoc[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fxcrt[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fxge[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fxcodec[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fxfontmgr[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fxhal[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fxmath[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fdrm[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fxbarcode[dbg_mt_x86_vc10].lib;../fxcore/lib/dbg/mt_x86_vc10/fxfontconvert[dbg_mt_x86_vc10].lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../;../fxcore/include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>../lib/libcurl.lib;../fxcore/lib/rel/mt_x86_vc10/fpdfapi[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fpdfdoc[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fxcrt[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fxge[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fxcodec[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fxfontmgr[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fxhal[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fxmath[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fdrm[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fxbarcode[rel_mt_x86_vc10].lib;../fxcore/lib/rel/mt_x86_vc10/fxfontconvert[rel_mt_x86_vc10].lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\pdfasync.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\pdfasync.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
