@@ -24,12 +24,3 @@ Note: You may encounter an error here.
 
  5. The tool was configured to search "pdf form" with bing and then try to download them. Will check if the file was a pdf form really with FXCORE before download. Checked both AcroForm and XFA.
 
-
-Known Issues:
-1. Non-form files may be downloaded. This caused by redundant data in PDF files. 
-
-
-
-Contact:
-qun_wei@foxitsoftware.com
-xiaoxia_yu@foxitsoftware.cn 
