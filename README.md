@@ -1,5 +1,4 @@
-﻿
-##Simple User Guide
+## Simple User Guide
 
  1. The tool was developed with python 2.7. So please install python 2.7 first (latest version 2.7.11). 
 
